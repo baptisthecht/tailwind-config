@@ -59,8 +59,20 @@ const config: Config = {
     extend: {
       colors: {
         ...colors,
-        primary: colors.webgerest,
+        primary: process.env.CLIENT_NAME === "IANORD" ? colors.webresto : colors.webgerest,
         secondary: colors.gray[450],
+      },
+      fontSize: {
+        "t-4xl": ["72px", "64px"],
+        "t-3xl": ["56px", "48px"],
+        "t-2xl": ["32px", "36px"],
+        "t-xl": ["24px", "24px"],
+        "t-md": ['18px', "16px"],
+        "t-base": ['16px', "16px"],
+        "b-lg": ['18px', "24px"],
+        "b-md": ['16px', "16px"],
+        "b-base": ['14px', "16px"],
+        "b-caption": ["12px", "16px"]
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
