@@ -31,7 +31,7 @@ export function AppProvider({ children }: PropsWithChildren<{}>) {
         isOpen,
         setIsOpen,
         actualColor,
-        setActualColor
+        setActualColor,
     };
     return (
         <AppContext.Provider value={values}>
