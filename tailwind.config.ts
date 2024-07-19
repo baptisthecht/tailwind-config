@@ -86,7 +86,10 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        primary: process.env.CLIENT_NAME === "IANORD" ? colors.webresto : colors.webgerest,
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
@@ -111,6 +114,7 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        brand: process.env.CLIENT_NAME === "IANORD" ? colors.webresto : colors.webgerest,
       },
       borderRadius: {
         lg: "var(--radius)",
